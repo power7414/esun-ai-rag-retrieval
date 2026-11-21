@@ -1,0 +1,10 @@
+# Python >= 3.10. Versions in comments are the ones used for the 2026-11-07 measured run.
+torch>=2.0            # 2.15.0 (CPU is enough)
+transformers>=4.40    # 5.22.1
+numpy>=1.24           # 2.5.4
+scikit-learn>=1.3     # 1.9.1
+rank_bm25>=0.2.2      # 0.2.2
+jieba>=0.42.1         # 0.42.1
+pdfplumber>=0.10      # 0.11.10
+pypdf>=4.0            # 7.0.0
+tqdm>=4.65            # optional, progress bars in build_finance_embeddings.py
