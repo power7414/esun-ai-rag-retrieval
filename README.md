@@ -72,7 +72,7 @@ The final method:
 4. combines them as `0.4 × BM25/max(BM25) + 0.6 × minmax(dense)` — the 0.4/0.6 weights were reused
    from the team's earlier scripts, not tuned here.
 
-What actually mattered (finance, 50 questions; details in [docs/ablation_study.md](docs/ablation_study.md)):
+What actually mattered (finance, 50 questions; details in [docs/ablation_study.md](docs/ablation_study.md), in Chinese):
 
 | Change | Finance P@1 |
 | :--- | :---: |
@@ -194,7 +194,6 @@ documents differ slightly because of PDF-library versions):
 │   ├── results.png                  # results chart
 │   └── make_results_chart.py        # script that draws it
 ├── data/README.md                   # where to put the (non-public) competition data
-└── archive/                         # old demo, hard-coded scores, not a result
 ```
 
 ## Limitations and honest notes
@@ -209,11 +208,9 @@ documents differ slightly because of PDF-library versions):
   not the entry submitted during the competition, and the official leaderboard score is not recorded
   here.
 - **Scanned PDFs are skipped.** 87 finance PDFs have no text layer; the pipeline does not run OCR on them.
-- **`archive/` is not a working system.** It contains an early demo whose retrievers return fixed scores
-  (0/150 when run).
 
 ## Team and my contribution
 
 Team project for *Introduction to Financial Technology* (NTU).
 
-Three-person team. My parts: testing the accuracy of the candidate embedding models, and the reranking step for the finance (financial-report) questions.
+Three-person team. My parts: testing the retrieval accuracy of the candidate embedding models, and the finance reranking stage, which re-scores candidate report chunks by fusing embedding and BM25 scores (the finance hybrid described above).

@@ -54,6 +54,6 @@ FAQ 的候選是官方 JSON 內的問答。用 Conan-embedding-v1 比對「使�
 | 舊說法 | 現況 |
 | :--- | :--- |
 | 11/02 直接 Q2A 向量檢索金融 12%、整體 60.67% | 原程式需要本機沒有的模型、無 P@1 紀錄；用同一 Conan 模型實測整篇 Q2A 為 66%（斷詞文字 52%）。 |
-| BiLSTM / DSSM 雙塔模型金融 0% | `archive/experiments/bilstm_dssm_test.py` 只會印出寫死的 0%；11/09 的 DSSM 程式需要 `bert-base-chinese` 並現場訓練，未重跑。 |
+| BiLSTM / DSSM 雙塔模型金融 0% | 早期的 BiLSTM/DSSM 測試程式只會印出寫死的 0%（已自 repo 移除）；11/09 的 DSSM 程式需要 `bert-base-chinese` 並現場訓練，未重跑。 |
 | 全面 Tesseract OCR 金融 48%、整體 72.67%，「資本適足率 → 資木適足率」錯字 | 找不到對應程式與紀錄。87 份金融 PDF 是掃描檔（沒有文字層），目前的 pipeline 直接略過它們。 |
 | 最佳組合 FAQ 96／保險 88／金融 80／整體 88.00% | 三個數字取自不同版本，沒有被同一支程式一起跑過。單一 pipeline 實測為 96／90／80／**88.67%**。 |

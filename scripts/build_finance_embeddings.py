@@ -161,7 +161,7 @@ def build():
         all_metadata.extend(part_metadata)
 
         if part_idx < NUM_PARTS:
-            print(f"  ❄️ 散熱冷卻中... 休息 5 秒讓 MacBook Air 恢復溫度...")
+            print("  pausing 5 s between batches...")
             time.sleep(5)
 
     print("\n" + "=" * 70)
