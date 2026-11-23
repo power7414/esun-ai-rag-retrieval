@@ -204,13 +204,14 @@ documents differ slightly because of PDF-library versions):
   the choice of method itself is still selected on the test data.
 - **The financial dictionary is a minor factor** (+1 question). The gain comes from using raw text and
   the chunked hybrid.
-- **The unified pipeline is a 2026 reconstruction**, assembled from the team's 2024 components; it is
-  not the entry submitted during the competition, and the official leaderboard score is not recorded
-  here.
+- **88.67% is post-competition work, not the competition result.** During the competition (2024) the team
+  was shortlisted in the preliminary round. Afterwards I rebuilt the pipeline from the team's components and
+  tuned it further; every number in this README comes from that later work. The leaderboard score of the
+  original submission is not recorded here.
 - **Scanned PDFs are skipped.** 87 finance PDFs have no text layer; the pipeline does not run OCR on them.
 
 ## Team and my contribution
 
 Team project for *Introduction to Financial Technology* (NTU).
 
-Three-person team. My parts: testing the retrieval accuracy of the candidate embedding models, and the finance reranking stage, which re-scores candidate report chunks by fusing embedding and BM25 scores (the finance hybrid described above).
+Three-person team. During the competition I tested the retrieval accuracy of the candidate embedding models and built the finance score-fusion step, which scores candidate report chunks by combining embedding and BM25 scores (the finance hybrid described above). After the competition I rebuilt the pipeline on my own and ran the ablations reported here.
